@@ -7,6 +7,9 @@
 # Mostrar a data e hora atuais
 echo "Data e Hora: $(date)"
 
+# Atualizar Lista e Aplicar pacotes
+sudo apt-get update && apt-get upgrade
+
 # Mostrar os pacotes que podem ser atualizados
 echo -e "\nPacotes que podem ser atualizados:"
 upgradable=$(apt list --upgradable 2>/dev/null | grep -v Listing)
